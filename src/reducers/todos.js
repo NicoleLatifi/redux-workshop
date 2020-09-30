@@ -14,7 +14,7 @@ export const todos = (state = [], action) => {
       //   // console.log(action)
       // })
       // return newState;
-      state.map(todo => {
+      return state.map(todo => {
         if(todo.id === action.id) {
           todo.completed = !todo.completed
         }
