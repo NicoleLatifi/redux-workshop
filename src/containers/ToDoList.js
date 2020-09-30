@@ -1,11 +1,13 @@
 import React from 'react';
-import ToDo from '../components/ToDo';
+import ToDo from './ToDo';
 import { connect } from 'react-redux';
 
 const ToDoList = ({todos}) => {
   const displayTodos = todos.map(todo => {
+    console.log(todo.completed)
     return (
         <ToDo
+          // {todo={todo}}
           {...todo}
           key={todo.id}
         />
